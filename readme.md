@@ -1,0 +1,1 @@
+`git clone https://github.com/axfelix/xmlps-vagrant` + `cd xmlps-vagrant + `vagrant up`. runs on localhost:8008.
