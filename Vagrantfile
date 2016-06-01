@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   unless  $forward.eql? "FALSE"  
-    config.vm.network :forwarded_port, guest: 8008, host: 80 # Apache
+    config.vm.network :forwarded_port, guest: 80, host: 8008 # Apache
   end
 
   config.vm.provider "virtualbox" do |vb|
