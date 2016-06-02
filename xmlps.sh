@@ -7,11 +7,12 @@ export DEBIAN_FRONTEND=noninteractive
 export LC_ALL=C.UTF-8
 sudo apt-get update
 sudo -E apt-get install -q -y software-properties-common
-sudo add-apt-repository -y ppa:ondrej/php5
+sudo add-apt-repository -y ppa:ondrej/php
 sudo add-apt-repository -y ppa:andrei-pozolotin/maven3
+sudo add-apt-repository -y ppa:openjdk-r/ppa
 sudo apt-get update
-sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python-lxml openjdk-7-jre exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5-xsl php5-curl php5-cli php5-mysql sendmail build-essential mysql-server apache2 php5-common php5 wget curl zip git maven3
-sudo apt-get upgrade -y php5-common
+sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python-lxml openjdk-8-jre exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5.5-xsl php5.5-curl php5.5-cli php5.5-mysql sendmail build-essential mysql-server apache2 php5.5-common php5.5 wget curl zip git maven3
+sudo apt-get upgrade -y php5.5-common
 wget -O crfpp.deb https://www.dropbox.com/s/svgq8xyz7bbouov/crfpp_0.58-raring-ppa0_amd64.deb?dl=0
 wget -O libcrfpp.deb https://www.dropbox.com/s/zuycitdtyxuisfz/libcrfpp-dev_0.58-raring-ppa0_amd64.deb?dl=0
 sudo dpkg -i *.deb
@@ -26,7 +27,8 @@ sudo mv ../../MITIE-models /opt/mitie/.
 cd ../../..
 wget https://github.com/kermitt2/grobid/archive/grobid-parent-0.4.0.zip
 unzip grobid-parent-0.4.0.zip
-cd grobid-grobid-parent-0.4.0/
+mv grobid-grobid-parent-0.4.0 /opt/grobid
+cd /opt/grobid
 mvn -Dmaven.test.skip=true clean install
 cd /var/www/
 sudo git clone https://github.com/pkp/xmlps.git
