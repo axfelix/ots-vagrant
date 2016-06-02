@@ -27,7 +27,7 @@ sudo mv ../../MITIE-models /opt/mitie/.
 cd ../../..
 wget https://github.com/kermitt2/grobid/archive/grobid-parent-0.4.0.zip
 unzip grobid-parent-0.4.0.zip
-mv grobid-grobid-parent-0.4.0 /opt/grobid
+sudo mv grobid-grobid-parent-0.4.0 /opt/grobid
 cd /opt/grobid
 mvn -Dmaven.test.skip=true clean install
 cd /var/www/
