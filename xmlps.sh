@@ -11,8 +11,8 @@ sudo add-apt-repository -y ppa:ondrej/php
 sudo add-apt-repository -y ppa:andrei-pozolotin/maven3
 sudo add-apt-repository -y ppa:openjdk-r/ppa
 sudo apt-get update
-sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python-lxml exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby openjdk-7-jdk libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5.5-xsl php5.5-curl php5.5-cli php5.5-mysql php5.5-zip sendmail build-essential mysql-server apache2 php5.5-common php5.5 wget curl zip git maven3
-sudo apt-get upgrade -y php5.5-common
+sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python-lxml exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby openjdk-7-jdk libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5.6-xsl php5.6-curl php5.6-cli php5.6-mysql php5.6-zip sendmail build-essential mysql-server apache2 php5.6-common php5.6 wget curl zip git maven3
+sudo apt-get upgrade -y php5.6-common
 wget -O crfpp.deb https://www.dropbox.com/s/svgq8xyz7bbouov/crfpp_0.58-raring-ppa0_amd64.deb?dl=0
 wget -O libcrfpp.deb https://www.dropbox.com/s/zuycitdtyxuisfz/libcrfpp-dev_0.58-raring-ppa0_amd64.deb?dl=0
 sudo dpkg -i *.deb
@@ -55,6 +55,8 @@ rm /var/www/html/vendor/knmnyn/ParsCit/crfpp/crf_learn
 rm /var/www/html/vendor/knmnyn/ParsCit/crfpp/crf_test
 ln -s /usr/bin/crf_learn /var/www/html/vendor/knmnyn/ParsCit/crfpp/.
 ln -s /usr/bin/crf_test /var/www/html/vendor/knmnyn/ParsCit/crfpp/.
+ln -s /var/www/html/vendor/dyve/jquery-autocomplete/src/jquery.autocomplete.js jquery.autocomplete.js styles/css/jquery.autocomplete.css
+ln -s /var/www/html/vendor/dyve/jquery-autocomplete/src/jquery.autocomplete.js jquery.autocomplete.js javascript/jquery.autocomplete.css
 sudo wget -O /etc/apache2/sites-available/xmlps.conf https://raw.githubusercontent.com/pkp/xmlps/master/docs/xmlps.conf
 sudo rm /etc/apache2/sites-enabled/*
 sudo ln -s /etc/apache2/sites-available/xmlps.conf /etc/apache2/sites-enabled/xmlps.conf
