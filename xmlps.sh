@@ -55,8 +55,6 @@ rm /var/www/html/vendor/knmnyn/ParsCit/crfpp/crf_learn
 rm /var/www/html/vendor/knmnyn/ParsCit/crfpp/crf_test
 ln -s /usr/bin/crf_learn /var/www/html/vendor/knmnyn/ParsCit/crfpp/.
 ln -s /usr/bin/crf_test /var/www/html/vendor/knmnyn/ParsCit/crfpp/.
-ln -s /var/www/html/vendor/dyve/jquery-autocomplete/src/jquery.autocomplete.js style/css/jquery.autocomplete.css
-ln -s /var/www/html/vendor/dyve/jquery-autocomplete/src/jquery.autocomplete.js javascript/jquery.autocomplete.css
 sudo wget -O /etc/apache2/sites-available/xmlps.conf https://raw.githubusercontent.com/pkp/xmlps/master/docs/xmlps.conf
 sudo rm /etc/apache2/sites-enabled/*
 sudo ln -s /etc/apache2/sites-available/xmlps.conf /etc/apache2/sites-enabled/xmlps.conf
