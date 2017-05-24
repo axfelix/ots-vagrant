@@ -1,4 +1,4 @@
-`git clone https://github.com/axfelix/xmlps-vagrant` + `cd xmlps-vagrant` + `vagrant up`. runs on localhost:8008.
+`git clone https://github.com/axfelix/ots-vagrant` + `cd ots-vagrant` + `vagrant up`. runs on localhost:8008.
 
  
 
