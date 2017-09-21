@@ -71,3 +71,7 @@ apachecroncommand="sudo service apache2 restart"
 apachecron="@reboot $apachecroncommand"
 cat <(fgrep -i -v "$apachecroncommand" <(crontab -l)) <(echo "$apachecron") | crontab -
 sudo su -c 'cat <(fgrep -i -v "cd /var/www/html && bash /var/www/html/start_queues.sh" <(crontab -l)) <(echo "@reboot cd /var/www/html && bash /var/www/html/start_queues.sh") | crontab -' www-data
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
