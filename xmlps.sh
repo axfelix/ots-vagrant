@@ -12,7 +12,7 @@ sudo add-apt-repository -y ppa:andrei-pozolotin/maven3
 sudo add-apt-repository -y ppa:openjdk-r/ppa
 sudo add-apt-repository -y ppa:libreoffice/ppa
 sudo apt-get update
-sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python3-lxml exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby openjdk-7-jdk libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5.6-xsl php5.6-curl php5.6-cli php5.6-mysql php5.6-zip sendmail build-essential mysql-server apache2 php5.6-common php5.6 wget curl zip git maven3 python3-dev python3-pip
+sudo -E apt-get -q -y install bibutils libreoffice ure uno-libs3 python3-uno libreoffice-script-provider-python unoconv python3-lxml exiftool pandoc pandoc-citeproc libghc-citeproc-hs-data ruby openjdk-8-jdk libxml-twig-perl libxml-writer-string-perl libxml-writer-perl php5.6-xsl php5.6-curl php5.6-cli php5.6-mysql php5.6-zip sendmail build-essential mysql-server apache2 php5.6-common php5.6 wget curl zip git maven3 python3-dev python3-pip
 sudo apt-get upgrade -y php5.6-common
 wget -O crfpp.deb https://www.dropbox.com/s/svgq8xyz7bbouov/crfpp_0.58-raring-ppa0_amd64.deb?dl=0
 wget -O libcrfpp.deb https://www.dropbox.com/s/zuycitdtyxuisfz/libcrfpp-dev_0.58-raring-ppa0_amd64.deb?dl=0
