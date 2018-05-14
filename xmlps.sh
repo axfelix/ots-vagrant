@@ -29,13 +29,12 @@ sudo mkdir /opt/mitie
 sudo cp ner_stream /opt/mitie/.
 sudo mv ../../MITIE-models /opt/mitie/.
 cd ../../..
-wget https://github.com/kermitt2/grobid/archive/grobid-parent-0.4.0.zip
-unzip grobid-parent-0.4.0.zip
-sudo mv grobid-grobid-parent-0.4.0 /opt/grobid
+wget https://github.com/kermitt2/grobid/archive/0.5.1.zip
+unzip 0.5.1.zip
+sudo mv grobid-0.5.1 /opt/grobid
 cd /opt/grobid
-mvn -Dmaven.test.skip=true clean install
-cd grobid-service
-mvn -Dmaven.test.skip=true jetty:run-war&
+./gradlew clean install
+./gradlew run&
 cd /var/www/
 sudo git clone https://github.com/pkp/xmlps.git
 sudo rm html/index.html
@@ -66,7 +65,7 @@ sudo ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/re
 sudo service apache2 restart
 sudo chsh -s /bin/bash www-data
 sudo su -c "bash /var/www/html/start_queues.sh" www-data
-grobidcroncommand="cd /opt/grobid/grobid-service && mvn -Dmaven.test.skip=true jetty:run-war&"
+grobidcroncommand="cd /opt/grobid/ && ./gradlew run&"
 grobidcron="@reboot $grobidcroncommand"
 cat <(fgrep -i -v "$grobidcroncommand" <(crontab -l)) <(echo "$grobidcron") | crontab -
 apachecroncommand="sudo service apache2 restart"
