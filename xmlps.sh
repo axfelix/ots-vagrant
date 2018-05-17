@@ -20,6 +20,7 @@ sudo dpkg -i *.deb
 sudo pip3 install editdistance
 sudo rm /usr/bin/python
 sudo ln -s /usr/bin/python3 /usr/bin/python
+sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 git clone https://github.com/mit-nlp/MITIE
 cd MITIE
 make MITIE-models
